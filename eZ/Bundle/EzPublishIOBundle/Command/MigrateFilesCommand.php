@@ -146,7 +146,8 @@ EOT
         );
 
         $output->writeln([
-            'Total number of files to update: ' . ($totalCount === null ? 'unknown' : $totalCount),
+            'Total number of files to migrate: ' . ($totalCount === null ? 'unknown' : $totalCount),
+            'This number does not include image aliases, but they will also be migrated.',
             '',
         ]);
 
@@ -301,5 +302,11 @@ EOT
         $progress->finish();
 
         $output->writeln("\n\nFinished processing $elapsedFileCount files.");
+        if ($totalFileCount && $totalFileCount > $elapsedFileCount) {
+            $output->writeln([
+                'Files that could not be migrated: ' . ($totalFileCount - $elapsedFileCount),
+                '',
+            ]);
+        }
     }
 }

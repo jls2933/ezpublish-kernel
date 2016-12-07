@@ -57,7 +57,7 @@ services:
         parent: ezpublish.core.io.migration.migration_handler
         arguments:
             - "@ezpublish.image_alias.variation_purger.legacy_storage_image_file.image_file_list"
-            - "@ezpublish.image_alias.variation_path_generator.original_directory"
+            - "@ezpublish.image_alias.variation_path_generator"
             - "@liip_imagine.filter.configuration"
             - "%ezsettings.default.image.published_images_dir%"
         tags:

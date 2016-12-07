@@ -1,7 +1,8 @@
 # IO migration
 
 > Added in 6.7 / 2016.12
-> NB: This feature is experimental, for the time being. Use with caution!
+
+**NB: This feature is experimental, for the time being. Use with caution!**
 
 ### Context
 This document describes a command script that can migrate binary files
@@ -10,7 +11,6 @@ from an IO repository to another.
 A common use-case is to migrate local files, stored with the default IO
 configuration, to a new IO configuration.
 
-### 
 We will consider the following IO configuration for this document:
 
 ```yaml
