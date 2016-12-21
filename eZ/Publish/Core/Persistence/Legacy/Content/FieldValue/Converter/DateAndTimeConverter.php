@@ -112,6 +112,7 @@ class DateAndTimeConverter implements Converter
                 $data = array(
                     'rfc850' => null,
                     'timestamp' => time(),
+                    'timestring' => 'now',
                 );
                 break;
 
@@ -124,6 +125,7 @@ class DateAndTimeConverter implements Converter
                 $data = array(
                     'rfc850' => null,
                     'timestamp' => $date->getTimestamp(),
+                    'timestring' => sprintf('%+d seconds', $date->getTimestamp() - time()),
                 );
                 break;
 

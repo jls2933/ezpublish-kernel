@@ -274,6 +274,18 @@ class DateAndTimeTest extends FieldTypeTest
                 ),
                 DateAndTimeValue::fromTimestamp($date->getTimeStamp()),
             ),
+            array(
+                array(
+                    'timestring' => 'now',
+                ),
+                DateAndTimeValue::fromTimestamp(time()),
+            ),
+            array(
+                array(
+                    'timestring' => '+42 seconds',
+                ),
+                DateAndTimeValue::fromTimestamp(time() + 42),
+            ),
         );
     }
 
